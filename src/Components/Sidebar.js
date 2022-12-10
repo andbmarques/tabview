@@ -25,13 +25,18 @@ const Sidebar = ({ isOpen, onClose, btnRef }) => {
                 </DrawerHeader>
                 <DrawerBody>
                     <Stack alignItems='center' h='250' mt='5' spacing={5} >
-                        <Avatar name='andbmarques' size='xl' />
+                        <Avatar name='andbmarques' size='xl' color='white' bgColor='red.500' />
                         <Text fontWeight='semibold' >Anderson Barbosa</Text>
                     </Stack>
                     <Stack h='200' mt='-70'>
                         <Button
                             as={RouterLink}
                             to='/'
+                            onClick={() => {
+                                setTimeout(() => {
+                                    onClose()
+                                }, 200)
+                            }}
                         >
                             <Icon
                                 as={House}
@@ -43,6 +48,11 @@ const Sidebar = ({ isOpen, onClose, btnRef }) => {
                         <Button
                             as={RouterLink}
                             to='/notes'
+                            onClick={() => {
+                                setTimeout(() => {
+                                    onClose()
+                                }, 200)
+                            }}
                         >
                             <Icon
                                 as={BookmarkSimple}
@@ -54,6 +64,11 @@ const Sidebar = ({ isOpen, onClose, btnRef }) => {
                         <Button
                             as={RouterLink}
                             to='/projects'
+                            onClick={() => {
+                                setTimeout(() => {
+                                    onClose()
+                                }, 200)
+                            }}
                         >
                             <Icon
                                 as={Notebook}
@@ -65,6 +80,11 @@ const Sidebar = ({ isOpen, onClose, btnRef }) => {
                         <Button
                             as={RouterLink}
                             to='/projects'
+                            onClick={() => {
+                                setTimeout(() => {
+                                    onClose()
+                                }, 200)
+                            }}
                         >
                             <Icon
                                 as={User}

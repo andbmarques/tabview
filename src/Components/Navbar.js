@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { Bird, List, Plus, MagnifyingGlass, Money, Coin } from 'phosphor-react';
 import Sidebar from './Sidebar';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -35,7 +36,7 @@ const Navbar = () => {
                 justifyContent='space-between'
             >
                 <Flex>
-                    <Stack direction='row' alignItems='center' spacing='2' >
+                    <Stack direction='row' alignItems='center' spacing='2' as={Link} to='/' >
                         <Icon
                             as={Bird}
                             color='red.500'
@@ -47,8 +48,8 @@ const Navbar = () => {
                 </Flex>
                 <Stack>
                     <InputGroup>
-                        <Input variant='filled' placeholder='Pesquisar' focusBorderColor="red.500" />
-                        <InputRightElement>
+                        <Input variant='filled' placeholder='Pesquisar' focusBorderColor='transparent' />
+                        <InputRightElement >
                             <IconButton
                                 size='md'
                                 fontSize='lg'
